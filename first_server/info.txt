@@ -1,0 +1,4 @@
+I have written something here
+It's pretty important
+therefore I have stored it in a file
+Nothing bad happens to files on systems.
