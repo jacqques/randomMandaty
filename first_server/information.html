@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>information page</title>
-    <script type="text/javascript" src="/first_server/scripts.js" ></script>
+    <script defer type="text/javascript" src="/first_server/scripts.js" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 </head>
+<style>
+    .btn {
+        background-color: forestgreen;
+    }
+</style>
 <body>
+
 <div id="info">
     <div id="file-info">
         <button class="btn btn-default" id="ajaxTest" onclick="ajaxAttempt()">Tryk</button>
+        <br>
+        <form id="post-test">
+            <input type="text" id="post-text">
+            <input type="submit" id="post-btn" class="btn" style="background-color: blue; color: orangered">
+        </form>
         <script>
-            updateDiv()
+            //updateDiv() can't use with defer, since script not loaded when trying to run method
+            //have to use defer, or can't use jquery. Bit of a bind. Solution could be to have 2 .js files but seems silly.
         </script>
     </div>
 

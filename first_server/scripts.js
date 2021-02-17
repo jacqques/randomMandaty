@@ -6,13 +6,30 @@ const updateDiv = () => {
 
 function ajaxAttempt(){
     $.ajax({
-        url: '/ajax',
-        type: 'POST',
-        data: 'vigtig data',
+        url: '/ajax/get',
+        type: 'GET',
         success: function (data){
             //document.getElementById('file-info').innerText += data //using some standard something
             $('#file-info').append(data) //using jquery
         }
     })
 }
+
+$('#post-test').submit(function (event){
+    event.preventDefault()
+    let jsonObject = {}
+    jsonObject["post-text"] = $('#post-text').val()
+    console.log(jsonObject)
+    $.ajax({
+        url: '/ajax/post',
+        type: 'POST',
+        contentType: 'application/JSON',
+        data: JSON.stringify(jsonObject),
+        success: function (data){
+            console.log("virker")
+            console.log(data)
+        }
+    })
+})
+
 

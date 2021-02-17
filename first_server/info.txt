@@ -1,4 +1,3 @@
-I have written something here
-It's pretty important
-therefore I have stored it in a file
-Nothing bad happens to files on systems.
+This data is very important
+So I have saved it in a file
+Nothing bad happens when you save in a file!this will appear in text, it's like magicomg it woooooookrs
